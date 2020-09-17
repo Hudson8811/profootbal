@@ -1,0 +1,289 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+		title: 'index.html'
+		};
+
+
+
+
+block main
+	.luzhniki
+		.first-screen
+			.first-screen__bg
+				img(src='./img/bg-luzhniki.jpg', alt= 'bg-luzhniki')
+			.container.first-screen__container
+				.first-screen__title
+					p Запуск филиала с 1 октября 2020 года
+					p «Лужники»
+					p Играй в футбол в лучшем футбольном месте Москвы! <br class='dbr'>
+						|  Запишись на тренировку с профессиональными тренерами!
+					+button('button--light-green first-screen__button')
+				.first-screen__info
+					img(src='./img/stadium-schema.png', alt= 'stadium-schema')
+					.about-place
+						.about-place__circle
+							svg
+								use(xlink:href='./svg/sprite.svg#kremlin')
+						.about-place__text
+							p Расположение
+							p Близость к центру <br> столицы
+					.about-place
+						.about-place__circle
+							svg
+								use(xlink:href='./svg/sprite.svg#infrastructure')
+						.about-place__text
+							p Топовая инфраструктура
+							p Лучшие поля, раздевалки и множество кафе
+					.about-place
+						.about-place__circle
+							svg
+								use(xlink:href='./svg/sprite.svg#')
+						.about-place__text
+							p Профессиональные тренеры
+							p Индивидуальный подход к каждому
+					.about-place
+						.about-place__circle
+							svg
+								use(xlink:href='./svg/sprite.svg#field')
+						.about-place__text
+							p
+							p Специальная программа подготовки именно взрослых любителей
+					.about-place
+						.about-place__circle
+							svg
+								use(xlink:href='./svg/sprite.svg#field')
+						.about-place__text
+							p
+							p Возможность участия в любительских чемпионатах
+		.program.program--place
+			.program__content
+				.container
+					.program__wrapper
+						.program__text
+							.program__text-title Занятия проходят на территории спорткомплекса «Лужники»
+							p Занятия проходят на территории СК Лужники, а именно на Северном спортивном ядре Лужников - это специально оборудованная зона, предназначенная для занятий футболом.
+								|  В нее входят группа футбольных полей и здание с комплексом комфортных раздевалок и душевых кабин. Футбольные поля размером 70х50м оснащены
+								|  самым лучшим в Москве искусственным газоном последнего поколения из монофиламентного волокна с системой подогрева, которая позволяет с комфортом
+								|  играть и тренироваться даже зимой, а уникальное освещение полей не слепит и позволяет тренироваться даже ночью.
+							p В непосредственной близости располагается прекрасный парк с множеством баров и кафе.
+							p Лужники - это место притяжение всех любителей спорта, красоты и комфорта.
+						.program__picture
+							img(src='./img/stadium/air-1.jpg', alt= 'air-1')
+							img(src='./img/stadium/air-2.jpg', alt= 'air-2')
+							img(src='./img/stadium/air-3.jpg', alt= 'air-3')
+							img(src='./img/stadium/air-4.jpg', alt= 'air-4')
+		.video-block
+			iframe(src="https://www.youtube.com/embed/uoAh9_ecGEw" frameborder="0" allowfullscreen)
+		.program.program--with-bg
+			.program__bg
+				img(src='./img/bg-program.jpg', alt= 'bg-program')
+			.program__content
+				.container
+					.program__wrapper
+						.program__text
+							.program__text-title Как проходят тренировки <br> на стадионе «Лужники»
+							p Тренировки длятся 90 минут.
+							p 1 этап - Разминка, растяжка - 10 минут.
+							p 2 этап - Сет упражнений, на технику <br class='dbr'> или командные взаимодействия - 45 минут
+							p 3 этап - Игра в футбол - 30 минут
+							p 4 этап - Заминка - 5 минут
+							p Мы с понимаем относимся к тому, что наши члены клуба это в первую очередь уже взрослые любители футбола,
+								|  большинство из которых не имеет футбольного образования, поэтому разработали специальную программу подготовки, которая это учитывает,
+								|  сохраняя при этом разнообразие, интересные и при этом сбалансированные упражнения, снижающие риск получения травм.
+							p Для желающих поиграть в настоящий соревновательный футбол мы организовываем внутренние турниры, а лучших мы приглашаем принять участие в
+								|  одной из команд нашего футбольного клуба, участвующих в любительских чемпионатах Москвы.
+							p Так же два раза в год мы выезжаем на недельные футбольные фестивали в Турции, которые проходят на натуральных полях и собирают
+								|  любителей футбола со всей страны.
+							+button('program__button')
+						.program__picture
+							img(src='./img/program-2.jpg', alt= 'program-2')
+
+		.advantages.advantages--trainer
+			.container
+				+title('Наши тренеры')
+				.advantages__subtitle Весь наш тренерский штаб состоит из профессиональных лицензированных тренеров
+				.trainer
+					.trainer-item
+						.trainer-item__photo
+							img(src='./img/trainer/item-1.jpg', alt= 'item-1')
+						.trainer-item__info
+							.trainer-item__name Комаров <br class='dbr'> Роман Александрович
+							.trainer-item__education Выпускник школы Красный Октябрь (Москва)
+					.trainer-item
+						.trainer-item__photo
+							img(src='./img/trainer/item-2.jpg', alt= 'item-2')
+						.trainer-item__info
+							.trainer-item__name Осколков <br class='dbr'> Альберт Николаевич
+							.trainer-item__education Воспитанник нижегородской ДЮСШ-8
+					.trainer-item
+						.trainer-item__photo
+							img(src='./img/trainer/item-3.jpg', alt= 'item-3')
+						.trainer-item__info
+							.trainer-item__name Соловьев <br class='dbr'> Павел Сергеевич
+							.trainer-item__education Выпусник ДЮСШ ПФК ЦСКА (Москва)
+					.trainer-item
+						.trainer-item__photo
+							img(src='./img/trainer/item-1.jpg', alt= 'item-1')
+						.trainer-item__info
+							.trainer-item__name Комаров <br class='dbr'> Роман Александрович
+							.trainer-item__education Выпускник школы Красный Октябрь (Москва)
+					.trainer-item
+						.trainer-item__photo
+							img(src='./img/trainer/item-2.jpg', alt= 'item-2')
+						.trainer-item__info
+							.trainer-item__name Осколков <br class='dbr'> Альберт Николаевич
+							.trainer-item__education Воспитанник нижегородской ДЮСШ-8
+					.trainer-item
+						.trainer-item__photo
+							img(src='./img/trainer/item-3.jpg', alt= 'item-3')
+						.trainer-item__info
+							.trainer-item__name Соловьев <br class='dbr'> Павел Сергеевич
+							.trainer-item__education Выпусник ДЮСШ ПФК ЦСКА (Москва)
+
+
+
+		.schedule
+			.container
+				+title('Расписание тренировок', 'title--small')
+				.schedule__subtitle Наши тренировки проходят в группах разного уровня подготовки. <br class='dbr'>
+					|  Группы отличаются сложностью упражнений и средним уровнем игроков. <br class='dbr'>
+					|  Это сделано для того, чтобы каждый любитель комфортно чувствовал <br class='dbr'>
+					|  себя с игроками одного уровня
+				.table.table--schedule
+					table
+						thead
+							tr
+								th(colspan='4') Группа от среднего до продвинутого уровня
+						tbody
+							tr
+								td День тренировки
+								td Время тренировки
+								td Тренер
+								td Поле
+							tr
+								td Понедельник
+								td 20.30 - 22.00
+								td Выясняется
+								td №2
+							tr
+								td Среда
+								td 20.30 - 22.00
+								td Выясняется
+								td №3
+				+title('Стоимость тренировок', 'title--small')
+				.table.table--price
+					table
+						thead
+							tr
+								th Абонемент
+								th Кол-во тренировок
+								th Срок действия (дни)
+								th Стоимость (руб.)
+								th Стоимость одной тренировки (руб.)
+						tbody
+							tr
+								td Разовая тренировка
+								td 1
+								td 1
+								td 2 500,00
+								td 2 500,00
+							tr
+								td Первая пробная тренировка Скидка 70%
+								td 1
+								td 14
+								td 500,00
+								td 500,00
+							tr
+								td Абонемент Short S
+								td 4
+								td 35
+								td 8 100,00
+								td 2 025,00
+							tr
+								td Абонемент Medium M
+								td 8+1 пропуск <br> (2 раза в неделю)
+								td 35
+								td 15 600,00
+								td 1 950,00
+							tr
+								td Абонемент Long L
+								td 12+2 пропуска <br> (3 раза в неделю)
+								td 35
+								td 22 200,00
+								td 1 850,00
+							tr
+								td Абонемент Extra Long XL
+								td 48+6 пропусков
+								td 185
+								td 86 400,00
+								td 1 800,00
+				+button('schedule__button')
+
+		.advantages.advantages--gallery
+			.advantages__bg
+				img(src='./img/bg-gallery.jpg', alt= 'bg-gallery')
+			.container
+				+title('Фотогалерея стадиона', 'title--small')
+				.advantages__subtitle Приходите на тренировки, чтобы полностью насладиться игрой на лучших стадионах
+				.gallery
+					.gallery__wrapper
+						a.gallery-item(href='./img/gallery-2/gallery-1.jpg')
+							svg
+								use(xlink:href='./svg/sprite.svg#zoom')
+							img(src='./img/gallery-2/gallery-1.jpg', alt= 'gallery-item')
+						a.gallery-item(href='./img/gallery-2/gallery-2.jpg')
+							svg
+								use(xlink:href='./svg/sprite.svg#zoom')
+							img(src='./img/gallery-2/gallery-2.jpg', alt= 'gallery-item')
+						a.gallery-item(href='./img/gallery-2/gallery-3.jpg')
+							svg
+								use(xlink:href='./svg/sprite.svg#zoom')
+							img(src='./img/gallery-2/gallery-3.jpg', alt= 'gallery-item')
+						a.gallery-item(href='./img/gallery-2/gallery-4.jpg')
+							svg
+								use(xlink:href='./svg/sprite.svg#zoom')
+							img(src='./img/gallery-2/gallery-4.jpg', alt= 'gallery-item')
+						a.gallery-item(href='./img/gallery-2/gallery-5.jpg')
+							svg
+								use(xlink:href='./svg/sprite.svg#zoom')
+							img(src='./img/gallery-2/gallery-5.jpg', alt= 'gallery-item')
+						a.gallery-item(href='./img/gallery-2/gallery-6.jpg')
+							svg
+								use(xlink:href='./svg/sprite.svg#zoom')
+							img(src='./img/gallery-2/gallery-6.jpg', alt= 'gallery-item')
+						a.gallery-item(href='./img/gallery-2/gallery-7.jpg')
+							svg
+								use(xlink:href='./svg/sprite.svg#zoom')
+							img(src='./img/gallery-2/gallery-7.jpg', alt= 'gallery-item')
+						a.gallery-item(href='./img/gallery-2/gallery-8.jpg')
+							svg
+								use(xlink:href='./svg/sprite.svg#zoom')
+							img(src='./img/gallery-2/gallery-8.jpg', alt= 'gallery-item')
+						a.gallery-item(href='./img/gallery-2/gallery-9.jpg')
+							svg
+								use(xlink:href='./svg/sprite.svg#zoom')
+							img(src='./img/gallery-2/gallery-9.jpg', alt= 'gallery-item')
+
+		.advantages.advantages--feedback
+			.advantages__bg
+				img(src='./img/bg-feedback-2.jpg', alt= 'bg-feedback-2')
+			.container.advantages__container
+				+title('Запишитесь на тренировку', 'title--small')
+				.advantages__subtitle Заполните необходимые данные и наши менеджеры свяжутся с Вами
+				form.form
+					label
+						p Введите Ваши фамилию и имя<span>*</span>
+						input(type='text' name='surname' placeholder='Иванов Андрей' required)
+					label
+						p Введите Ваш E-mail<span>*</span>
+						input(type='email' name='email' placeholder='post@gmail.com' required)
+					label
+						p Введите Ваш телефон<span>*</span>
+						input(type='phone' name='phone' placeholder='+ 7 (000) 123-45-67' required)
+					label
+						p Ваш комментарий
+						textarea(placeholder='Введите текст...')
+					+button('form__button')

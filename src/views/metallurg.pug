@@ -1,0 +1,298 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+
+
+
+block main
+	.first-screen
+		.first-screen__bg
+			img(src='./img/bg-metallurg.jpg', alt= 'bg-metallurg')
+		.container.first-screen__container
+			.first-screen__title
+				p Запуск филиала с 21 сентября
+				p «Металлург»
+				p Пройдите профессиональную подготовку <br class='dbr'> и повысте свое мастерство и спортивные результаты
+				+button('button--light-green first-screen__button')
+		.first-screen__footballer
+			img(src='./img/footballer.png', alt= 'footballer')
+
+
+	.stadium
+		.stadium__blur-ye
+			img(src='./img/blur-ye.png', alt= 'blur-ye')
+		.stadium__blur-wh
+			img(src='./img/blur-wh.png', alt= 'blur-wh')
+		.container.stadium__container
+			+title('Стадион «Металлург»')
+			.stadium__text
+				p Где в Москве можно комфортно поиграть в футбол? Где и с кем потренироваться <br class='dbr'> на хорошем поле, если ты уже взрослый? Ответ: у нас!
+				p ProFootball приглашает на тренировки всех желающих от 18 лет и открывает набор <br class='dbr'> в группы начального и продвинутого уровня!
+					|  Теперь каждый любитель может почувствовать себя профессионалом, а профессионал — отлично провести время <br class='dbr'> в компании любителей.
+			.stadium__media
+				img(src='./img/bg-metallurg.jpg', alt= 'bg-metallurg')
+			.stadium__text ProFootball — это современная инфраструктура в пешей доступности от метро, европейский сервис <br class='dbr'> и уникальные программы подготовки для взрослых любителей.
+			a(href='#').stadium__video Видео с тренировок на стадионе «Металлург»
+			.stadium__media.stadium__media--video
+				iframe(src="https://www.youtube.com/embed/uoAh9_ecGEw" frameborder="0" allowfullscreen)
+			+button('stadium__button')
+
+
+	.advantages
+		.advantages__bg
+			img(src='./img/bg-advantages.jpg', alt= 'bg-advantages')
+		.container
+			+title('Основные преимущества <br> стадиона «Металлург»')
+			.advantages__subtitle Мы предлагаем нашим Клиентам только лучшее!
+			.advantages__wrapper
+				.advantage-card
+					.advantage-card__picture
+						img(src='./img/advantages/item-1.jpg', alt= 'item-1')
+					.advantage-card__text <span>Парковка</span> <br> для автомобилей <br> (40 мест)
+				.advantage-card
+					.advantage-card__picture
+						img(src='./img/advantages/item-2.jpg', alt= 'item-2')
+					.advantage-card__text <span>Три поля для игры:</span> <br> 11х11, 8х8, 7х7, <br> 5х5, 4х4
+				.advantage-card
+					.advantage-card__picture
+						img(src='./img/advantages/item-3.jpg', alt= 'item-3')
+					.advantage-card__text <span>Голландский</span> <br> искусственный газон <br> 5-го поколения
+				.advantage-card
+					.advantage-card__picture
+						img(src='./img/advantages/item-4.jpg', alt= 'item-4')
+					.advantage-card__text <span>Современная</span> <br> система освещения, <br> которая не слепит
+				.advantage-card
+					.advantage-card__picture
+						img(src='./img/advantages/item-5.jpg', alt= 'item-5')
+					.advantage-card__text <span>Комфортный</span> <br> раздевалочный комплекс <br> с 7-ю душевыми
+
+
+	.program
+		img.program__blur-ye(src='./img/blur-ye-2.png', alt= 'blur-ye')
+		img.program__blur-wh(src='./img/blur-wh-2.png', alt= 'blur-wh')
+		.program__content
+			.container
+				+title('Как проходят тренировки <br> на стадионе «Металлург»')
+				.program__wrapper
+					.program__text
+						p Наши тренеры разработали специальный комплекс упражнений, ориентированный на людей <br class='dbr'> в возрасте 18–45 лет. Сбалансированная <br class='dbr'>
+							|  по физической нагрузке программа представляет собой сеты упражнений, направленных на развитие техники ударов, приёма
+							|  и контроля мяча, командных взаимодействий.
+						p Тренер контролирует выполнение упражнений каждым игроком и рассказывает о возможностях применения этих навыков непосредственно <br class='dbr'> во время игры.
+							|  <br class='dbr'> После того, как тренер поставит правильную технику, вы можете повторять упражнения самостоятельно.
+						p Не менее важная часть подготовки – развитие тактических навыков. Мы обучим вас видению пространства и партнеров, работе в команде
+							|  (формат 8х8, 6х6) с учётом ваших <br class='dbr'> индивидуальных особенностей.
+					.program__picture
+						img(src='./img/program-1.jpg', alt= 'program-1')
+				+button('program__button')
+
+
+	.advantages.advantages--trainer
+		.advantages__bg
+			img(src='./img/bg-trainer.jpg', alt= 'bg-trainer')
+		.container
+			+title('Наши тренеры')
+			.advantages__subtitle Весь наш тренерский штаб состоит из профессиональных лицензированных тренеров, <br class='dbr'>
+														|  которые работают у нас при условии безусловной требовательности к подопечным
+			.trainer
+				.trainer-item
+					.trainer-item__photo
+						img(src='./img/trainer/item-1.jpg', alt= 'item-1')
+					.trainer-item__info
+						.trainer-item__name Комаров <br class='dbr'> Роман Александрович
+						.trainer-item__education Выпускник школы Красный Октябрь (Москва)
+				.trainer-item
+					.trainer-item__photo
+						img(src='./img/trainer/item-2.jpg', alt= 'item-2')
+					.trainer-item__info
+						.trainer-item__name Осколков <br class='dbr'> Альберт Николаевич
+						.trainer-item__education Воспитанник нижегородской ДЮСШ-8
+				.trainer-item
+					.trainer-item__photo
+						img(src='./img/trainer/item-3.jpg', alt= 'item-3')
+					.trainer-item__info
+						.trainer-item__name Соловьев <br class='dbr'> Павел Сергеевич
+						.trainer-item__education Выпусник ДЮСШ ПФК ЦСКА (Москва)
+				.trainer-item
+					.trainer-item__photo
+						img(src='./img/trainer/item-1.jpg', alt= 'item-1')
+					.trainer-item__info
+						.trainer-item__name Комаров <br class='dbr'> Роман Александрович
+						.trainer-item__education Выпускник школы Красный Октябрь (Москва)
+				.trainer-item
+					.trainer-item__photo
+						img(src='./img/trainer/item-2.jpg', alt= 'item-2')
+					.trainer-item__info
+						.trainer-item__name Осколков <br class='dbr'> Альберт Николаевич
+						.trainer-item__education Воспитанник нижегородской ДЮСШ-8
+				.trainer-item
+					.trainer-item__photo
+						img(src='./img/trainer/item-3.jpg', alt= 'item-3')
+					.trainer-item__info
+						.trainer-item__name Соловьев <br class='dbr'> Павел Сергеевич
+						.trainer-item__education Выпусник ДЮСШ ПФК ЦСКА (Москва)
+
+
+
+	.schedule
+		.container
+			+title('Расписание тренировок')
+			.schedule__subtitle Наши тренировки проходят в группах разного уровня подготовки. <br class='dbr'>
+													|  Группы отличаются сложностью упражнений и средним уровнем игроков. <br class='dbr'>
+													|  Это сделано для того, чтобы каждый любитель комфортно чувствовал себя <br class='dbr'>
+													|  с игроками одного уровня
+			.table
+				table
+					thead
+						tr
+							th(colspan='3') Группа начальной подготовки
+					tbody
+						tr
+							td День тренировки
+							td Время тренировки
+							td Тренер
+						tr
+							td Понедельник
+							td 19.00 - 20.30
+							td Комаров Р.А.
+						tr
+							td Четверг
+							td 19.00 - 20.30
+							td Комаров Р.А.
+			+title('Стоимость тренировок')
+			.table.table--price
+				table
+					thead
+						tr
+							th Абонемент
+							th Кол-во тренировок
+							th Срок действия (дни)
+							th Стоимость (руб.)
+							th Стоимость одной тренировки (руб.)
+					tbody
+						tr
+							td Разовая тренировка
+							td 1
+							td 1
+							td 1 300,00
+							td 1 300,00
+						tr
+							td Первая пробная тренировка Скидка 70%
+							td 1
+							td 14
+							td 500,00
+							td 500,00
+						tr
+							td Абонемент Short S
+							td 4+1 пропуск
+							td 35
+							td 4 100,00
+							td 1 025,00
+						tr
+							td Абонемент Medium M
+							td 8+1 пропуск <br> (1 раз в неделю)
+							td 63
+							td 7 600,00
+							td 950,00
+						tr
+							td Абонемент Medium M
+							td 8+2 пропуска <br> (2 раза в неделю)
+							td 35
+							td 7 600,00
+							td 950,00
+						tr
+							td Абонемент Long L
+							td 12+2 пропуска <br> (3 раза в неделю)
+							td 35
+							td 10 800,00
+							td 900,00
+						tr
+							td Абонемент Extra Long XL
+							td 48+6 пропусков
+							td 185
+							td 39 900,00
+							td 831,00
+						tr
+							td Абонемент Extra Extra Long XL
+							td 90+8 пропусков
+							td 370
+							td 69 900,00
+							td 766,00
+			+button('schedule__button')
+
+
+	.advantages.advantages--gallery
+		.advantages__bg
+			img(src='./img/bg-gallery.jpg', alt= 'bg-gallery')
+		.container
+			+title('Фотогалерея стадиона')
+			.advantages__subtitle Приходите на тренировки, чтобы полностью насладиться игрой на однм из лучших стадионов
+			.gallery
+				.gallery__wrapper
+					a.gallery-item(href='./img/gallery/gallery-1.jpg')
+						svg
+							use(xlink:href='./svg/sprite.svg#zoom')
+						img(src='./img/gallery/gallery-1.jpg', alt= 'gallery-item')
+					a.gallery-item(href='./img/gallery/gallery-2.jpg')
+						svg
+							use(xlink:href='./svg/sprite.svg#zoom')
+						img(src='./img/gallery/gallery-2.jpg', alt= 'gallery-item')
+					a.gallery-item(href='./img/gallery/gallery-3.jpg')
+						svg
+							use(xlink:href='./svg/sprite.svg#zoom')
+						img(src='./img/gallery/gallery-3.jpg', alt= 'gallery-item')
+					a.gallery-item(href='./img/gallery/gallery-4.jpg')
+						svg
+							use(xlink:href='./svg/sprite.svg#zoom')
+						img(src='./img/gallery/gallery-4.jpg', alt= 'gallery-item')
+					a.gallery-item(href='./img/gallery/gallery-5.jpg')
+						svg
+							use(xlink:href='./svg/sprite.svg#zoom')
+						img(src='./img/gallery/gallery-5.jpg', alt= 'gallery-item')
+					a.gallery-item(href='./img/gallery/gallery-6.jpg')
+						svg
+							use(xlink:href='./svg/sprite.svg#zoom')
+						img(src='./img/gallery/gallery-6.jpg', alt= 'gallery-item')
+					a.gallery-item(href='./img/gallery/gallery-7.jpg')
+						svg
+							use(xlink:href='./svg/sprite.svg#zoom')
+						img(src='./img/gallery/gallery-7.jpg', alt= 'gallery-item')
+					a.gallery-item(href='./img/gallery/gallery-8.jpg')
+						svg
+							use(xlink:href='./svg/sprite.svg#zoom')
+						img(src='./img/gallery/gallery-8.jpg', alt= 'gallery-item')
+					a.gallery-item(href='./img/gallery/gallery-9.jpg')
+						svg
+							use(xlink:href='./svg/sprite.svg#zoom')
+						img(src='./img/gallery/gallery-9.jpg', alt= 'gallery-item')
+		img.pic-ball(src='./img/ball.png', alt= 'ball')
+		img.pic-grass(src='./img/grass.png', alt= 'grass')
+
+
+	.advantages.advantages--feedback
+		.advantages__bg
+			img(src='./img/bg-feedback.jpg', alt= 'bg-feedback')
+		img.advantages__blur-wh(src='./img/blur-wh-4.png', alt= 'blur-wh')
+		img.advantages__blur-wh(src='./img/blur-wh-4.png', alt= 'blur-wh')
+		.container
+			+title('Запишитесь на тренировку')
+			.advantages__subtitle Заполните необходимые данные и наши менеджеры свяжутся с Вами
+			form.form
+				label
+					p Введите Ваши фамилию и имя<span>*</span>
+					input(type='text' name='surname' placeholder='Иванов Андрей' required)
+				label
+					p Введите Ваш E-mail<span>*</span>
+					input(type='email' name='email' placeholder='post@gmail.com' required)
+				label
+					p Введите Ваш телефон<span>*</span>
+					input(type='phone' name='phone' placeholder='+ 7 (000) 123-45-67' required)
+				label
+					p Ваш комментарий
+					textarea(placeholder='Введите текст...')
+				+button('form__button')

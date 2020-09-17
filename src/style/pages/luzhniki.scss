@@ -1,6 +1,10 @@
 .luzhniki {
 	.first-screen {
-		padding: 331px 0 195px;
+		padding: 120px 0 100px;
+
+		@media (min-width: $dMin) {
+			padding: 331px 0 195px;
+		}
 
 		&__container {
 			display: block;
@@ -26,42 +30,90 @@
 		&__info {
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: center;
 			width: 100%;
 			padding: 60px 12px;
-			margin: 0 -25px;
-			position: absolute;
-			bottom: -21.3vw;
-			left: 25px;
+			position: relative;
+			margin-top: 45px;
+			margin-bottom: -435px;
 			background-color: $white;
 			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 			border-radius: 0 0 153px 153px;
 			box-sizing: border-box;
 			overflow: hidden;
 
+			@media (min-width: $tMin) {
+				margin: 100px -25px -435px;
+				left: 25px;
+			}
+
 			> img {
 				position: absolute;
-				bottom: -100px;
-				right: -116px;
+				bottom: 0;
+				right: 16vw;
 				width: 60%;
 				opacity: 0.1;
+
+				@media (min-width: 500px) {
+					bottom: -10vw;
+				}
+
+				@media (min-width: $dMin) {
+					bottom: -6vw;
+					right: -9vw;
+				}
 			}
 		}
 	}
 
 	.about-place {
-		width: calc(25% - 50px);
-		margin: 0 25px;
+		width: 100%;
+		margin-bottom: 25px;
 		position: relative;
+		z-index: 1;
 
-		+ .about-place::before {
-			content: '';
-			display: block;
-			width: 1px;
-			height: 120px;
-			background-color: $gray-6f;
-			position: absolute;
-			top: 34px;
-			left: -25px;
+		@media (min-width: 500px) {
+			width: calc(50% - 50px);
+			margin: 0 25px 25px;
+		}
+
+		@media (min-width: $tMin) {
+			width: calc(33.3333% - 50px);
+		}
+
+		@media (min-width: $dMin) {
+			width: calc(25% - 50px);
+		}
+
+		&::before {
+			@media (min-width: 500px) {
+				content: '';
+				display: block;
+				width: 1px;
+				height: 120px;
+				background-color: $gray-6f;
+				position: absolute;
+				top: 34px;
+				left: -25px;
+			}
+		}
+
+		@media (min-width: 500px) and (max-width: 767px) {
+			&:nth-child(2n+2)::before {
+				display: none;
+			}
+		}
+
+		@media (min-width: $tMin) and (max-width: 1023px) {
+			&:nth-child(3n+2)::before {
+				display: none;
+			}
+		}
+
+		@media (min-width: $dMin) {
+			&:nth-child(4n+2)::before {
+				display: none;
+			}
 		}
 
 		&__circle {
@@ -94,8 +146,12 @@
 
 	.program {
 		&--place {
-			padding-top: 311px;
+			padding-top: 370px;
 			padding-bottom: 0;
+
+			@media (min-width: $dMin) {
+				padding-top: 311px;
+			}
 
 			.program {
 				&__content {
@@ -110,7 +166,14 @@
 						bottom: 0;
 						right: 0;
 						background-color: $green;
-						border-top-right-radius: 900px 1000px;
+
+						@media (min-width: $d1280) {
+							border-top-right-radius: 100px 300px;
+						}
+
+						@media (min-width: 1700px) {
+							border-top-right-radius: 900px 1000px;
+						}
 					}
 				}
 
@@ -135,23 +198,35 @@
 				&__picture {
 					display: flex;
 					flex-wrap: wrap;
-					margin: 0 -7.5px;
 					border-radius: 0;
 					overflow: auto;
 					padding-top: 23px;
 					padding-left: 14px;
 
+					@media (min-width: 550px) {
+						margin: 0 -7.5px;
+					}
+
 					img {
-						width: calc(50% - 15px);
+						width: 100%;
 						height: 218px;
-						margin: 0 7.5px 15px;
+						margin-bottom: 15px;
+
+						@media (min-width: 550px) {
+							width: calc(50% - 15px);
+							margin: 0 7.5px 15px;
+						}
 					}
 				}
 			}
 		}
 
 		&--with-bg {
-			padding: 100px 0;
+			padding: 30px 0;
+
+			@media (min-width: $dMin) {
+				padding: 100px 0;
+			}
 
 			.program {
 				&__bg {
@@ -192,11 +267,16 @@
 				}
 
 				&__text-title {
-					font-size: 36px;
-					line-height: 45px;
+					font-size: 24px;
+					line-height: 26px;
 					font-weight: bold;
 					color: $green;
 					margin-bottom: 20px;
+
+					@media (min-width: $dMin) {
+						font-size: 36px;
+						line-height: 45px;
+					}
 				}
 
 				&__text p {
@@ -210,7 +290,11 @@
 				}
 
 				&__button {
-					margin: 50px 0 0;
+					margin: 20px auto 0;
+
+					@media (min-width: $dMin) {
+						margin: 50px 0 0;
+					}
 				}
 			}
 		}
@@ -219,7 +303,11 @@
 	.video-block {
 		height: 0;
 		position: relative;
-		padding-bottom: 36.45%;
+		padding-bottom: 55%;
+
+		@media (min-width: $dMin) {
+			padding-bottom: 36.45%;
+		}
 
 		iframe {
 			width: 100%;
@@ -236,7 +324,11 @@
 	}
 
 	.advantages--trainer {
-		padding: 38px 0 26px;
+		padding: 38px 0 50px;
+
+		@media (min-width: 1500px) {
+			padding: 38px 0 26px;
+		}
 
 		&::before {
 			content: '';
@@ -247,7 +339,14 @@
 			bottom: 0;
 			right: 0;
 			background-color: $green;
-			border-bottom-left-radius: 500px;
+
+			@media (min-width: $d1280) {
+				border-bottom-left-radius: 200px;
+			}
+
+			@media (min-width: 1700px) {
+				border-bottom-left-radius: 500px;
+			}
 		}
 
 		.title {
@@ -275,21 +374,35 @@
 	}
 
 	.advantages--gallery {
-		padding: 100px 0 85px;
+		padding: 35px 0;
+
+		@media (min-width: $dMin) {
+			padding: 100px 0 85px;
+		}
 	}
 
 	.advantages--feedback {
-		padding-top: 50px;
-		padding-bottom: 150px;
+		padding-top: 35px;
+		padding-bottom: 35px;
+
+		@media (min-width: $dMin) {
+			padding-top: 50px;
+			padding-bottom: 150px;
+		}
 
 		.advantages {
 			&__container {
 				max-width: 700px;
 				width: 100%;
-				padding: 50px 57px 46px 30px;
+				padding: 30px;
+				padding-bottom: 80px;
 				background-color: $white;
 				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 				border-radius: 0 0 153px 153px;
+
+				@media (min-width: $dMin) {
+					padding: 50px 57px 46px 30px;
+				}
 			}
 
 			&__bg {
@@ -305,7 +418,11 @@
 	}
 
 	.schedule {
-		padding: 77px 0 100px;
+		padding: 35px 0;
+
+		@media (min-width: $dMin) {
+			padding: 77px 0 100px;
+		}
 
 		&__subtitle {
 			font-size: 18px;
@@ -314,24 +431,34 @@
 		}
 
 		&__button {
-			margin: 47px auto 0;
+			margin: 35px auto 0;
+
+			@media (min-width: $dMin) {
+				margin: 47px auto 0;
+			}
 		}
 	}
 
 	.table--schedule {
-		margin: 17px -3px 50px;
+		margin: 17px -30px 50px;
+
+		@media (min-width: $dMin) {
+			margin: 17px -3px 50px;
+		}
 
 		table td {
-			&:nth-child(2) {
-				width: 28.2%;
-			}
+			@media (min-width: $dMin) {
+				&:nth-child(2) {
+					width: 28.2%;
+				}
 
-			&:nth-child(3) {
-				width: 21.8%;
-			}
+				&:nth-child(3) {
+					width: 21.8%;
+				}
 
-			&:last-child {
-				width: auto;
+				&:last-child {
+					width: auto;
+				}
 			}
 		}
 	}

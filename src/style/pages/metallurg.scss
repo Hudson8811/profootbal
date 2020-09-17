@@ -82,7 +82,14 @@
 			}
 
 			&:nth-child(3) {
+				font-size: 20px;
+				line-height: 22px;
 				font-weight: bold;
+
+				@media (min-width: $dMin) {
+					font-size: 30px;
+					line-height: 37px;
+				}
 			}
 		}
 	}
@@ -577,10 +584,13 @@
 }
 
 .table {
-	margin: 38px -3px 50px;
+	margin: 38px -30px 50px;
+
+	@media (min-width: $dMin) {
+		margin: 38px -3px 50px;
+	}
 
 	table {
-		display: block;
 		width: 100%;
 
 		@media (min-width: $dMin) {
@@ -616,6 +626,7 @@
 		td {
 			display: flex;
 			justify-content: flex-start;
+			align-items: center;
 			flex-wrap: nowrap;
 			line-height: 22px;
 			background-color: $gray-ee;
@@ -624,9 +635,14 @@
 			&::before {
 				content: attr(aria-label);
 				display: inline-block;
-				max-width: 100px;
+				max-width: 70px;
 				width: 100%;
 				margin-right: 40px;
+				text-align: left;
+
+				@media (min-width: 500px) {
+					max-width: 100px;
+				}
 
 				@media (min-width: $dMin) {
 					display: none;
@@ -635,6 +651,7 @@
 
 			@media (min-width: $dMin) {
 				display: table-cell;
+				width: auto;
 
 				&:first-child {
 					width: 30%;
@@ -644,6 +661,14 @@
 					width: 32%;
 				}
 			}
+		}
+	}
+
+	&--schedule tbody tr:first-child {
+		display: none;
+
+		@media (min-width: $dMin) {
+			display: table-row;
 		}
 	}
 
@@ -662,7 +687,9 @@
 
 			td {
 				&:not(:first-child) {
-					text-align: center;
+					@media (min-width: $dMin) {
+						text-align: center;
+					}
 				}
 
 				@media (min-width: $dMin) {
@@ -697,19 +724,31 @@
 	&__wrapper {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -7.5px;
 		position: relative;
 		z-index: 1;
+
+		@media (min-width: 650px) {
+			margin: 0 -7.5px;
+		}
 	}
 
 	.gallery-item {
-		width: calc(33.3333% - 15px);
-		margin: 0 7.5px 15px;
+		width: 100%;
+		margin-bottom: 15px;
 		height: 300px;
 		border-radius: 10px;
 		box-shadow: 0 30px 20px rgba(0, 0, 0, 0.1);
 		overflow: hidden;
 		position: relative;
+
+		@media (min-width: 650px) {
+			width: calc(50% - 15px);
+			margin: 0 7.5px 15px;
+		}
+
+		@media (min-width: $dMin) {
+			width: calc(33.3333% - 15px);
+		}
 
 		&:hover {
 			svg {
@@ -759,13 +798,17 @@
 	textarea {
 		width: 100%;
 		padding: 10px;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 		border: 1px solid $black;
 		background-color: $white;
 		border-radius: 5px;
 		font-size: 16px;
 		line-height: 20px;
 		box-sizing: border-box;
+
+		@media (min-width: $dMin) {
+			margin-bottom: 30px;
+		}
 
 		&::placeholder {
 			opacity: 0.5;
@@ -787,5 +830,14 @@
 
 	&__button {
 		margin: 0 auto;
+	}
+}
+
+#map {
+	width: 100%;
+	height: 200px;
+
+	@media (min-width: $tMin) {
+		height: 500px;
 	}
 }

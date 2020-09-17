@@ -78,10 +78,48 @@ $(document).ready(function () {
 		});
 	}
 
-	$.each($('tbody tr'), function () {
+	$.each($('.table--schedule tbody tr'), function () {
+		var title = $(this).parent('tbody').find('tr:first-child td');
+		$.each($(this).find('td'), function (index) {
+			$(this).attr('aria-label', title.eq(index).text());
+		});
+	});
+
+	$.each($('.table--price tbody tr'), function () {
 		var title = $(this).parent('tbody').siblings('thead').find('th');
 		$.each($(this).find('td'), function (index) {
 			$(this).attr('aria-label', title.eq(index).text());
 		});
 	});
+
+	function anchorScroll(e) {
+		e.click(function () {
+			link = $(this).attr('href');
+			to = $(link).offset().top;
+			$('body, html').animate({
+				scrollTop: to
+			}, 800);
+		});
+	}
+
+	anchorScroll($('.anchor'));
+
+	ymaps.ready(init);
+
+	function init() {
+		var map = new ymaps.Map("map", {
+			center: [55.719511, 37.551647],
+			zoom: 17,
+			controls: ["zoomControl"]
+		});
+
+		map.geoObjects.add(new ymaps.Placemark([55.719511, 37.551647], {
+			iconCaption: 'Лужники'
+		}, {
+			iconLayout: 'default#image',
+			iconImageHref: '/img/marker.png',
+			iconImageSize: [55, 75],
+			iconImageOffset: [-25, -70]
+		}))
+	}
 });

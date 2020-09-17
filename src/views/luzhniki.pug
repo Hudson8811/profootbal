@@ -20,7 +20,7 @@ block main
 					p «Лужники»
 					p Играй в футбол в лучшем футбольном месте Москвы! <br class='dbr'>
 						|  Запишись на тренировку с профессиональными тренерами!
-					+button('button--light-green first-screen__button')
+					+button('button--light-green first-screen__button anchor', '#feedback')
 				.first-screen__info
 					img(src='./img/stadium-schema.png', alt= 'stadium-schema')
 					.about-place
@@ -40,7 +40,7 @@ block main
 					.about-place
 						.about-place__circle
 							svg
-								use(xlink:href='./svg/sprite.svg#')
+								use(xlink:href='./svg/sprite.svg#field')
 						.about-place__text
 							p Профессиональные тренеры
 							p Индивидуальный подход к каждому
@@ -84,7 +84,7 @@ block main
 				.container
 					.program__wrapper
 						.program__text
-							.program__text-title Как проходят тренировки <br> на стадионе «Лужники»
+							.program__text-title Как проходят тренировки <br class='dbr'> на стадионе «Лужники»
 							p Тренировки длятся 90 минут.
 							p 1 этап - Разминка, растяжка - 10 минут.
 							p 2 этап - Сет упражнений, на технику <br class='dbr'> или командные взаимодействия - 45 минут
@@ -97,7 +97,7 @@ block main
 								|  одной из команд нашего футбольного клуба, участвующих в любительских чемпионатах Москвы.
 							p Так же два раза в год мы выезжаем на недельные футбольные фестивали в Турции, которые проходят на натуральных полях и собирают
 								|  любителей футбола со всей страны.
-							+button('program__button')
+							+button('program__button anchor', '#feedback')
 						.program__picture
 							img(src='./img/program-2.jpg', alt= 'program-2')
 
@@ -220,7 +220,7 @@ block main
 								td 185
 								td 86 400,00
 								td 1 800,00
-				+button('schedule__button')
+				+button('schedule__button anchor', '#feedback')
 
 		.advantages.advantages--gallery
 			.advantages__bg
@@ -230,50 +230,50 @@ block main
 				.advantages__subtitle Приходите на тренировки, чтобы полностью насладиться игрой на лучших стадионах
 				.gallery
 					.gallery__wrapper
-						a.gallery-item(href='./img/gallery-2/gallery-1.jpg')
+						a.gallery-item(href='./img/gallery-2/gallery-1.jpg', data-fancybox='gallery-2')
 							svg
 								use(xlink:href='./svg/sprite.svg#zoom')
 							img(src='./img/gallery-2/gallery-1.jpg', alt= 'gallery-item')
-						a.gallery-item(href='./img/gallery-2/gallery-2.jpg')
+						a.gallery-item(href='./img/gallery-2/gallery-2.jpg', data-fancybox='gallery-2')
 							svg
 								use(xlink:href='./svg/sprite.svg#zoom')
 							img(src='./img/gallery-2/gallery-2.jpg', alt= 'gallery-item')
-						a.gallery-item(href='./img/gallery-2/gallery-3.jpg')
+						a.gallery-item(href='./img/gallery-2/gallery-3.jpg', data-fancybox='gallery-2')
 							svg
 								use(xlink:href='./svg/sprite.svg#zoom')
 							img(src='./img/gallery-2/gallery-3.jpg', alt= 'gallery-item')
-						a.gallery-item(href='./img/gallery-2/gallery-4.jpg')
+						a.gallery-item(href='./img/gallery-2/gallery-4.jpg', data-fancybox='gallery-2')
 							svg
 								use(xlink:href='./svg/sprite.svg#zoom')
 							img(src='./img/gallery-2/gallery-4.jpg', alt= 'gallery-item')
-						a.gallery-item(href='./img/gallery-2/gallery-5.jpg')
+						a.gallery-item(href='./img/gallery-2/gallery-5.jpg', data-fancybox='gallery-2')
 							svg
 								use(xlink:href='./svg/sprite.svg#zoom')
 							img(src='./img/gallery-2/gallery-5.jpg', alt= 'gallery-item')
-						a.gallery-item(href='./img/gallery-2/gallery-6.jpg')
+						a.gallery-item(href='./img/gallery-2/gallery-6.jpg', data-fancybox='gallery-2')
 							svg
 								use(xlink:href='./svg/sprite.svg#zoom')
 							img(src='./img/gallery-2/gallery-6.jpg', alt= 'gallery-item')
-						a.gallery-item(href='./img/gallery-2/gallery-7.jpg')
+						a.gallery-item(href='./img/gallery-2/gallery-7.jpg', data-fancybox='gallery-2')
 							svg
 								use(xlink:href='./svg/sprite.svg#zoom')
 							img(src='./img/gallery-2/gallery-7.jpg', alt= 'gallery-item')
-						a.gallery-item(href='./img/gallery-2/gallery-8.jpg')
+						a.gallery-item(href='./img/gallery-2/gallery-8.jpg', data-fancybox='gallery-2')
 							svg
 								use(xlink:href='./svg/sprite.svg#zoom')
 							img(src='./img/gallery-2/gallery-8.jpg', alt= 'gallery-item')
-						a.gallery-item(href='./img/gallery-2/gallery-9.jpg')
+						a.gallery-item(href='./img/gallery-2/gallery-9.jpg', data-fancybox='gallery-2')
 							svg
 								use(xlink:href='./svg/sprite.svg#zoom')
 							img(src='./img/gallery-2/gallery-9.jpg', alt= 'gallery-item')
 
-		.advantages.advantages--feedback
+		#feedback.advantages.advantages--feedback
 			.advantages__bg
 				img(src='./img/bg-feedback-2.jpg', alt= 'bg-feedback-2')
 			.container.advantages__container
 				+title('Запишитесь на тренировку', 'title--small')
 				.advantages__subtitle Заполните необходимые данные и наши менеджеры свяжутся с Вами
-				form.form
+				form.form(action='', method='POST')
 					label
 						p Введите Ваши фамилию и имя<span>*</span>
 						input(type='text' name='surname' placeholder='Иванов Андрей' required)
@@ -287,3 +287,5 @@ block main
 						p Ваш комментарий
 						textarea(placeholder='Введите текст...')
 					+button('form__button')
+
+		#map

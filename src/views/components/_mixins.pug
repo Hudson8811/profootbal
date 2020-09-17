@@ -27,7 +27,7 @@ mixin breadcrumbs(paddingLeft=false,item1="", item2="", item3="", item4="", item
 					a.breadcrumbs-item-a(href="")
 						=item5
 
-mixin button(className, text, href)
+mixin button(className, href, text)
 	if (href)
 		a.button(href=href, class=className)= (text || 'Записаться')
 	else

@@ -783,7 +783,12 @@
 
 	label {
 		font-size: 16px;
+		margin-bottom: 10px;
+		display: block;
 
+		@media (min-width: $dMin) {
+			margin-bottom: 25px;
+		}
 		p {
 			padding-left: 6px;
 			padding-bottom: 4px;
@@ -794,11 +799,11 @@
 		}
 	}
 
-	input,
+	input,input[type="text"],input[type="email"],input[type="tel"],
 	textarea {
 		width: 100%;
 		padding: 10px;
-		margin-bottom: 15px;
+		margin: 0 0 5px;
 		border: 1px solid $black;
 		background-color: $white;
 		border-radius: 5px;
@@ -806,9 +811,6 @@
 		line-height: 20px;
 		box-sizing: border-box;
 
-		@media (min-width: $dMin) {
-			margin-bottom: 30px;
-		}
 
 		&::placeholder {
 			opacity: 0.5;

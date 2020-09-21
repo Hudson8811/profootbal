@@ -93,7 +93,7 @@ k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translatio
 /* my scripts */
 
 $(document).ready(function () {
-	
+
 });
 $(document).ready(function () {
 	$("input[name='phone']").mask(" +7 (999) 999-99-99");
@@ -175,7 +175,7 @@ $(document).ready(function () {
 		});
 	}
 
-	$('.program__picture').slick({
+	$('.js-program-slider-init').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,

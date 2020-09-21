@@ -100,13 +100,18 @@ footer,
 }
 
 .custom-dots {
-	display: flex;
+	margin-top: 10px;
+	width: 100%;
+	display: flex !important;
 	flex-wrap: wrap;
 	justify-content: center;
 	list-style: none;
 
 	li + li {
 		margin-left: 10px;
+	}
+	@media screen and (max-width:500px){
+		display: none !important;
 	}
 }
 
@@ -120,4 +125,12 @@ footer,
 	background-color: $white;
 	border: 1px solid $green;
 	border-radius: 50%;
+	cursor: pointer;
+	transition-duration: .2s;
+	&:not(.slick-active){
+		&:hover{
+			background-color: transparentize($green, 0.5);
+
+		}
+	}
 }

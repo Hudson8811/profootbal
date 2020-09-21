@@ -78,6 +78,17 @@ $(document).ready(function () {
 		});
 	}
 
+	$('.program__picture').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		dotsClass: "custom-dots",
+		customPaging: function() {
+			return '<button class="custom-dot"></button>';
+		},
+	});
+
 	$.each($('.table--schedule tbody tr'), function () {
 		var title = $(this).parent('tbody').find('tr:first-child td');
 		$.each($(this).find('td'), function (index) {

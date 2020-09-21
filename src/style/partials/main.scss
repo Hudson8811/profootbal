@@ -98,3 +98,26 @@ footer,
 	border: 3px solid #3c8ac9;
 	border-radius: 5px;
 }
+
+.custom-dots {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+
+	li + li {
+		margin-left: 10px;
+	}
+}
+
+.slick-active .custom-dot {
+	background-color: $green;
+}
+
+.custom-dot {
+	width: 15px;
+	height: 15px;
+	background-color: $white;
+	border: 1px solid $green;
+	border-radius: 50%;
+}
